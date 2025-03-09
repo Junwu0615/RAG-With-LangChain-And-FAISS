@@ -15,7 +15,7 @@
 |:--:|:--|:--:|
 | 專案上架 | - | 2025-02-28 |
 | Google Gemini | 用 Gemini 實作 RAG | 2025-02-28 |
-| OpenAI ChatGPT | 用 ChatGPT 實作 RAG | - |
+| OpenAI ChatGPT | 用 ChatGPT 實作 RAG | 2024-03-09 |
 | MediaTek Breeze | 用 Breeze 實作 RAG | - |
 | Meta LLama | 用 LLama 實作 RAG | - |
 | Fine-tung Embedding | 嘗試不同 Embedding | - |
@@ -41,7 +41,7 @@
 ```bash
 jupyter nbconvert --execute --to html ???.ipynb
 ```
-- #### [*Google Gemini + FAISS + embedding-001*](https://junwu0615.github.io/RAG-With-LangChain-And-FAISS/RAG-Gemini.html)
-- #### *OpenAI ChatGPT + FAISS + ???*
-- #### *Breeze2 + FAISS + ???*
-- #### *LLama2 + FAISS + ???*
+- #### [*Google Gemini + FAISS*](https://junwu0615.github.io/RAG-With-LangChain-And-FAISS/RAG-Gemini.html)
+- #### [*OpenAI ChatGPT + FAISS*](https://junwu0615.github.io/RAG-With-LangChain-And-FAISS/RAG-GPT.html)
+- #### *Breeze2 + FAISS*
+- #### *LLama2 + FAISS*
