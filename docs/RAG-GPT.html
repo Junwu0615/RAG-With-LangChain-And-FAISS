@@ -7565,7 +7565,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>C:\Users\PC\AppData\Local\Temp\ipykernel_60936\3523237785.py:2: LangChainDeprecationWarning: The class `OpenAIEmbeddings` was deprecated in LangChain 0.0.9 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-openai package and should be used instead. To use it run `pip install -U :class:`~langchain-openai` and import as `from :class:`~langchain_openai import OpenAIEmbeddings``.
+<pre>C:\Users\PC\AppData\Local\Temp\ipykernel_17268\3523237785.py:2: LangChainDeprecationWarning: The class `OpenAIEmbeddings` was deprecated in LangChain 0.0.9 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-openai package and should be used instead. To use it run `pip install -U :class:`~langchain-openai` and import as `from :class:`~langchain_openai import OpenAIEmbeddings``.
   embeddings = OpenAIEmbeddings(openai_api_key=os.getenv('OPENAI_API_KEY'))
 </pre>
 </div>
@@ -7668,7 +7668,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="II.%E3%80%80%E4%BD%BF%E7%94%A8-Gemini-%E9%80%B2%E8%A1%8C-RAG">II.　使用 Gemini 進行 RAG<a class="anchor-link" href="#II.%E3%80%80%E4%BD%BF%E7%94%A8-Gemini-%E9%80%B2%E8%A1%8C-RAG">¶</a></h3>
+<h3 id="II.%E3%80%80%E4%BD%BF%E7%94%A8-RAG-%E9%80%B2%E8%A1%8C%E5%A2%9E%E5%BC%B7%E5%BC%8F%E7%AD%94%E8%A6%86">II.　使用 RAG 進行增強式答覆<a class="anchor-link" href="#II.%E3%80%80%E4%BD%BF%E7%94%A8-RAG-%E9%80%B2%E8%A1%8C%E5%A2%9E%E5%BC%B7%E5%BC%8F%E7%AD%94%E8%A6%86">¶</a></h3>
 </div>
 </div>
 </div>
@@ -7805,7 +7805,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'RAG 通常指的是 "Retrieval-Augmented Generation"（檢索增強生成）模型，它是一種結合資料檢索和生成的自然語言處理技術。這種模型的基本思路是在生成答案之前，首先從一個大型的資料庫中檢索出與問題相關的信息，然後基於這些檢索出的信息來生成最終的答案。這種方法可以提高生成答案的準確性和一致性，因為它利用了外部資料庫中的實際數據來輔助生成過程。\n\n這種技術可以應用在許多領域，比如智能客服、信息檢索系統，以及學術問答系統等，它在保證答案質量的同時，也提高了回應的相關性和準確性。'</pre>
+<pre>'RAG 是 Retrieval-Augmented Generation 的縮寫，是一種結合檢索技術和生成模型的方法。它的核心思想是首先從外部知識庫中檢索出與輸入相關的信息，然後將這些檢索到的內容與生成模型結合，生成更具上下文關聯性和信息豐富的回答。\n\n在 RAG 的架構下，通常會採用如下過程：\n\n1. 檢索（Retrieval）：當系統接收到一個問題或提示時，它會首先從預先構建的知識庫或數據庫中檢索出可能相關的信息。\n\n2. 生成（Generation）：將檢索到的信息作為上下文，然後利用生成模型（如 GPT-3 等）生成最終的回答或內容。\n\n這種方法的優勢在於它結合了檢索系統快速獲取準確信息的能力和生成模型自動化生成人類語言的能力，從而提高了結果的準確性和豐富性。RAG 在許多自然語言處理和生成式任務中被廣泛使用，包括問答系統、輔助寫作等領域。'</pre>
 </div>
 </div>
 </div>
@@ -7831,7 +7831,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>C:\Users\PC\AppData\Local\Temp\ipykernel_60936\3191474142.py:5: LangChainDeprecationWarning: The method `BaseRetriever.get_relevant_documents` was deprecated in langchain-core 0.1.46 and will be removed in 1.0. Use :meth:`~invoke` instead.
+<pre>C:\Users\PC\AppData\Local\Temp\ipykernel_17268\3191474142.py:5: LangChainDeprecationWarning: The method `BaseRetriever.get_relevant_documents` was deprecated in langchain-core 0.1.46 and will be removed in 1.0. Use :meth:`~invoke` instead.
   relevant_docs = retriever.get_relevant_documents(query)
 </pre>
 </div>
@@ -7839,217 +7839,28 @@ a.anchor-link {
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'根據你提供的資訊，RAG 是一個知名品牌，專門製作高效的清潔抹布。這些抹布通常以30新台幣的價格在市面上銷售，並且是大部分家庭厨房中的常見物品，用於清潔用途。'</pre>
+<pre>'根據您提供的資訊，RAG 是一個知名品牌製作的高效清潔抹布，通常售價是 30 新台幣，基本上每戶人家都會在廚房裡放置一條 RAG 做為使用。'</pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=06268aa8-adb1-4464-ac4b-8c686102e715">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=de5546fe-b804-4cf9-a629-554527996f20">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="II.%E3%80%80%E4%BB%80%E9%BA%BC%E6%98%AF-Google-Gemini%EF%BC%9F">II.　什麼是 Google Gemini？<a class="anchor-link" href="#II.%E3%80%80%E4%BB%80%E9%BA%BC%E6%98%AF-Google-Gemini%EF%BC%9F">¶</a></h3>
+<h3 id="II.%E3%80%80RAG-%E6%98%AF%E6%8A%B9%E5%B8%83%E5%97%8E?-%E8%B6%85%E5%95%86%E5%8F%AF%E4%BB%A5%E8%B2%B7%E5%88%B0%E5%AE%83%E5%97%8E?">II.　RAG 是抹布嗎? 超商可以買到它嗎?<a class="anchor-link" href="#II.%E3%80%80RAG-%E6%98%AF%E6%8A%B9%E5%B8%83%E5%97%8E?-%E8%B6%85%E5%95%86%E5%8F%AF%E4%BB%A5%E8%B2%B7%E5%88%B0%E5%AE%83%E5%97%8E?">¶</a></h3>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=dd2825e4-63d4-414e-851e-4c7269f2a962">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f11dd6a8-a5dd-41da-9835-f3bedca68f36">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">norm_query</span><span class="p">(</span><span class="s2">"什麼是 Google Gemini？"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'Google Gemini 是 Google 開發的一個大型人工智慧和機器學習模型，專為增強自然語言處理和理解而設計。Gemini 的目的是整合 Google 在人工智慧領域的多方面技術和研究，以提高各種應用程式的功能，包括搜尋引擎、語音助手，以及其他需要自然語言理解的工具。\n\nGemini 作為 Google 一系列 AI 系統的一部分，努力結合深度學習和其他機器學習技術，以提升模型的準確性和效率。該模型的具體功能和應用可能會隨著科技的發展而不斷演變。'</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f86044b8-bad1-4749-8238-3712bdd0fbf7">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">rag_query</span><span class="p">(</span><span class="s2">"什麼是 Google Gemini？"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'根據截至 2023 年 10 月的資料，Google Gemini 是由 Google 開發的一套人工智慧技術與平台。Gemini 致力於將多重人工智慧技術整合在一起，以便在更廣泛的應用中提供創新和高效的解決方案。耐美尼（Gemini）的目標是提升各種設備和服務的智慧化程度，並應用於從個人裝置到企業服務的各個層面，增強用戶的整體體驗。具體的細節可能包含許多技術模組和功能，但目前公開的信息可能會隨時間更新。'</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=87bb7663-a6a1-4fc8-bc25-6e348acb3cd7">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="III.%E3%80%80%E4%BB%80%E9%BA%BC%E6%98%AF-ChatGPT%EF%BC%9F">III.　什麼是 ChatGPT？<a class="anchor-link" href="#III.%E3%80%80%E4%BB%80%E9%BA%BC%E6%98%AF-ChatGPT%EF%BC%9F">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4fa4ae1c-591e-4f70-bba2-8cd93566e8ec">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">norm_query</span><span class="p">(</span><span class="s2">"什麼是 ChatGPT？"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'ChatGPT 是由 OpenAI 開發的一款人工智慧語言模型。它基於 GPT（Generative Pre-trained Transformer）架構，設計目的是生成類似人類自然語言的文字。ChatGPT 擅長文本生成、問題回答、對話等語言任務。它通過大量語言數據進行訓練，能夠理解和生成語境相關的文字回應。當用戶輸入問題或描述時，ChatGPT會基於訓練數據中的模式識別來生成合理的回應。它廣泛應用於聊天機器人、虛擬助理等領域。'</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=58ac2a8f-92cb-4a56-87b2-5f400df29103">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">rag_query</span><span class="p">(</span><span class="s2">"什麼是 ChatGPT？"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'ChatGPT 是一種由 OpenAI 開發的對話生成人工智慧模型，基於其開發的語言模型（如 GPT-3、GPT-4）進行訓練。它被設計用來透過自然語言處理與用戶進行互動，提供各種問題的回答或是進行一般性的對話。ChatGPT 能夠理解和產生類似人類的文本，廣泛應用於客戶服務、教育等領域。'</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b8008ea3-4e51-4c52-b3d3-d8aa982e7046">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="IV.%E3%80%80%E4%BB%80%E9%BA%BC%E6%98%AF-Agent%EF%BC%9F">IV.　什麼是 Agent？<a class="anchor-link" href="#IV.%E3%80%80%E4%BB%80%E9%BA%BC%E6%98%AF-Agent%EF%BC%9F">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=50d27fc6-1027-4f4b-b6af-3c54995ce15d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">norm_query</span><span class="p">(</span><span class="s2">"什麼是 Agent？"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'在不同的情境下，「Agent」可以指不同的事物。以下是幾種常見的定義：\n\n1. **軟體代理（Software Agent）：** 在電腦科學中，軟體代理是一種能自主執行任務的程式。這些任務可以是資料的搜尋、過濾信息、或者是執行一些例行的操作。智能代理則是一種進階的軟體代理，具備一定的人工智慧能力，可以學習和適應，可以用於聊天機器人、推薦系統等。\n\n2. **多代理系統（Multi-Agent System）：** 這是一種由多個智能代理組成的系統，他們彼此之間可以互動、合作，常應用於模擬複雜的系統和解決分布式問題。\n\n3. **商業代理人（Business Agent）：** 在商業中，代理人是指受委託代表他人（通常是公司或個人）執行某些行為或達成某些交易的人。\n\n4. **化學和生物中的代理（Chemical/Biological Agent）：** 在這個領域，代理可以指某種化學物質或生物製劑，它能夠引起特定的化學或生物反應。這類代理通常在工業、醫療或農業中使用。\n\n這些是「Agent」在不同上下文中的主要含義。而在你所指的上下文中，可能是指其中一種或多種。若需要進一步了解某個特定的類型，請提供更詳細的背景信息。'</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f3177c7e-ca85-4c84-a026-a624c683127c">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">rag_query</span><span class="p">(</span><span class="s2">"什麼是 Agent？"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'在人工智慧和計算機科學的領域中，"Agent" 通常指的是一種能夠感知環境並執行行動以達成某些目標的系統。這些系統可以是軟體體系或程式，甚至是機器人。Agent 可以根據自身的編程或訓練學習來做出決定，並持續與環境互動，以適應或應對其環境中的變化。\n\nAgent 的具體功能和能力會依其設計目的而有所不同。在自然語言處理的環境中，人們可能會建立一個語言 Agent 來幫助進行語義理解或對話系統的運作。這些 Agents 可以在不同的應用中發揮作用，從虛擬助手到自主駕駛車輛等各種場合。'</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=92cec00d-5758-417b-acb0-9d43437898cb">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="V.%E3%80%80RAG-%E6%98%AF%E6%8A%B9%E5%B8%83%E5%97%8E?-%E8%B6%85%E5%95%86%E5%8F%AF%E4%BB%A5%E8%B2%B7%E5%88%B0%E5%AE%83%E5%97%8E?">V.　RAG 是抹布嗎? 超商可以買到它嗎?<a class="anchor-link" href="#V.%E3%80%80RAG-%E6%98%AF%E6%8A%B9%E5%B8%83%E5%97%8E?-%E8%B6%85%E5%95%86%E5%8F%AF%E4%BB%A5%E8%B2%B7%E5%88%B0%E5%AE%83%E5%97%8E?">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e16bb188-d90c-4f2e-8711-d10d9a62fd78">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">norm_query</span><span class="p">(</span><span class="s2">"RAG 是抹布嗎? 超商可以買到它嗎?"</span><span class="p">)</span>
@@ -8063,19 +7874,19 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'RAG 指的是「布」，通常用於清潔或其他目的。這類抹布在超商通常是可以買到的。許多超商會賣一些基本的家居清潔用品，其中可能包括抹布。不過，具體是否有出售會取決於超商的規模和商品配置。建議可以親自到附近的超商查看，或者先打電話詢問。'</pre>
+<pre>'在日常語境中，「rag」可以指抹布或破布。但如果你的問題是關於商業名稱或品牌，則可能不指代普通的抹布。在一般超市或便利商店中，你通常可以購買到多種清潔用的抹布，包括棉質、微纖維等材質的抹布。如果「RAG」是某個特定品牌或專門用品，則需在特定賣場或網路上查找。確認詳情可以查閱相關產品或品牌的官方資訊。'</pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=88e907d0-6192-4ed4-bbed-d1619c4461a7">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c1472064-402c-4201-b65b-d2479cb840c5">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">rag_query</span><span class="p">(</span><span class="s2">"RAG 是抹布嗎? 超商可以買到它嗎?"</span><span class="p">)</span>
@@ -8089,9 +7900,72 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>'根據你提供的資訊，RAG 是由知名品牌製作的高效清潔抹布，一般市售價格為 30 新台幣，基本上每戶人家都會在廚房使用一條 RAG。至於是否能在超商購買到它，這部分資訊未明確提供，但 RAG 作為一種常見的家庭用品，通常可以在超市、量販店或家居用品店找到。至於在超商是否有售，則可能需要具體查詢當地超商的商品庫存和供應情況。'</pre>
+<pre>'根據提供的信息，RAG確實是一個製作高效清潔抹布的知名品牌。所以，答案是：是的，RAG是一種抹布。至於是否能在超商買到，則需要根據實際情況查證。如果RAG是常見的市售品牌，且大多數家庭都有的話，通常能在超商購買到。然而，這最終取決於當地超商的商品供應。'</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b8008ea3-4e51-4c52-b3d3-d8aa982e7046">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="III.%E3%80%80%E4%BB%80%E9%BA%BC%E6%98%AF-Agent%EF%BC%9F">III.　什麼是 Agent？<a class="anchor-link" href="#III.%E3%80%80%E4%BB%80%E9%BA%BC%E6%98%AF-Agent%EF%BC%9F">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=50d27fc6-1027-4f4b-b6af-3c54995ce15d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">norm_query</span><span class="p">(</span><span class="s2">"什麼是 Agent？"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>'在計算機科學和人工智能的領域中，"Agent"（代理）通常指的是一種能夠感知其環境並自主行動的軟體程序或系統。這些代理可以根據收到的資訊及其內部狀態進行決策，以達成某種特定的目標。Agent 通常具備以下特徵：\n\n1. **自主性**：能夠獨立操作，根據感知到的環境資訊作出決策，而不需要人工直接指導。\n\n2. **感知能力**：可以透過感測器或其他形式獲取有關環境狀態的資訊。\n\n3. **反應能力**：能夠對環境的變化做出適當的反應。\n\n4. **目標導向**：通常指向達成特定的目標或任務。\n\n在多代理系統（Multi-agent Systems）中，多個Agent可以協作或競爭，以完成更複雜的任務。\n\n在不同情境中，"Agent"的具體實現和應用可能會有所不同，例如搜尋引擎中的網絡爬蟲、電子商務中的推薦系統、遊戲中的非玩家角色（NPC），等等。\n\n希望這些資訊有幫助！如果有其他相關的問題或需要進一步的解釋，歡迎隨時提問。'</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f3177c7e-ca85-4c84-a026-a624c683127c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">rag_query</span><span class="p">(</span><span class="s2">"什麼是 Agent？"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>'Agent 是指在特定環境中執行行動的實體，可以是軟體或硬件。它通常具備自動執行任務的能力，並能根據外部環境的變化來調整其行為。在計算機科學領域，Agent 可以指一套程式或機器人，根據預先設定的指導原則，執行某些任務或動作。在人工智慧中，智能Agent 能夠對環境做出感知，並制定可行的行動來達成特定目標。這些Agent 可以應用於各種場景，從智能家庭助理到自動駕駛車輛等。'</pre>
 </div>
 </div>
 </div>
